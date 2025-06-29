@@ -92,7 +92,6 @@ function Register({ isOpen, onClose, onLoginClick }) {
       //     ? "https://suturahub-backend.onrender.com/api/auth/signup"
       //     : "https://suturahub-backend.onrender.com/api/auth/buyer/signup";
 
-
       // Determine request body based on user type
       const requestBody =
         userType === "seller"

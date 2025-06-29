@@ -1,4 +1,4 @@
-const API_BASE_URL = `${import.meta.env.VITE_API_BASE}/api`;
+const API_BASE_URL = import.meta.env.VITE_API_BASE + '/api';
 // const API_BASE_URL = 'https://suturahub-backend.onrender.com/api';
 
 // Helper function to make API requests
