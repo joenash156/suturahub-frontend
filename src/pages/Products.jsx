@@ -17,7 +17,7 @@ function Products({ isSidebarOpen, onCloseSidebar, onAddToCart }) {
       try {
         setLoading(true);
         // const response = await fetch("https://suturahub-backend.onrender.com/api/products");
-        const response = await fetch("http://localhost:5000/api/products");
+        const response = await fetch(`${import.meta.env.VITE_API_BASE}/api/products`);
         const data = await response.json();
 
         if (data.success) {

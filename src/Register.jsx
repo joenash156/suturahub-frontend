@@ -81,12 +81,17 @@ function Register({ isOpen, onClose, onLoginClick }) {
       // Determine API endpoint based on user type
       const endpoint =
         userType === "seller"
-          ? "http://localhost:5000/api/auth/signup"
-          : "http://localhost:5000/api/auth/buyer/signup";
+          ? `${import.meta.env.VITE_API_BASE}/api/auth/signup`
+          : `${import.meta.env.VITE_API_BASE}/api/auth/buyer/signup`;
+      // const endpoint =
+      //   userType === "seller"
+      //     ? "http://localhost:5000/api/auth/signup"
+      //     : "http://localhost:5000/api/auth/buyer/signup";
       // const endpoint =
       //   userType === "seller"
       //     ? "https://suturahub-backend.onrender.com/api/auth/signup"
       //     : "https://suturahub-backend.onrender.com/api/auth/buyer/signup";
+
 
       // Determine request body based on user type
       const requestBody =
