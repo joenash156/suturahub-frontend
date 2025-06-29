@@ -1,5 +1,4 @@
-const API_BASE_URL = import.meta.env.VITE_API_BASE + '/api';
-// const API_BASE_URL = 'https://suturahub-backend.onrender.com/api';
+const API_BASE_URL = `${import.meta.env.VITE_API_BASE}/api`;
 
 // Helper function to make API requests
 export const apiRequest = async (endpoint, options = {}) => {
@@ -55,7 +54,7 @@ export const apiRequest = async (endpoint, options = {}) => {
     console.error('API Request failed:', error);
     
     if (error.name === 'TypeError' && error.message.includes('fetch')) {
-      throw new Error('Unable to connect to server. Please check if the backend is running on http://localhost:5000');
+      throw new Error(`Unable to connect to server. Please check if the backend is running on ${import.meta.env.VITE_API_BASE}`);
     }
     
     throw error;

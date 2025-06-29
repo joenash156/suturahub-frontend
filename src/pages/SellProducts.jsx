@@ -255,7 +255,7 @@ function SellProducts() {
 
       console.log("Submitting product data...");
 
-      await apiRequest("/products/create", {
+      await apiRequest(`${import.meta.env.VITE_API_BASE}/api/products/create`, {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,
